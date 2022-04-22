@@ -7,8 +7,8 @@ node{
     
     stage('Run Docker Compose File')
     {
+        sh `docker-machine start default`
         sh 'docker-compose build'
- 
         sh 'sudo docker-compose up -d'
     }
   stage('PUSH image to Docker Hub')
