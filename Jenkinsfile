@@ -7,8 +7,8 @@ node{
     
     stage('Run Docker Compose File')
     {
-        sh 'sudo -S docker-compose build'
-        sh '[sudo] password for jenkins: Snap@123'
+        sh 'docker-compose build'
+ 
         sh 'sudo docker-compose up -d'
     }
   stage('PUSH image to Docker Hub')
